@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="wasm_exec.js"></script>
+
+</head>
+<body>
+    <script>
+        (async () => {
+            const loader = new Go()
+
+let data = await fetch("main.wasm")
+let buffer = await data.arrayBuffer()
+let result  = await WebAssembly.instantiate(buffer, loader.importObject)
+
+loader.run(result.instance);
+
+test()
+        })()
+    </script>
+</body>
+</html>
