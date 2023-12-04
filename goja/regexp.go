@@ -2,13 +2,14 @@ package goja
 
 import (
 	"fmt"
-	"github.com/dlclark/regexp2"
-	"github.com/onlpsec/gojs/goja/unistring"
 	"io"
 	"regexp"
 	"sort"
 	"strings"
 	"unicode/utf16"
+
+	"github.com/dlclark/regexp2"
+	"github.com/onlpsec/gojs/goja/unistring"
 )
 
 type regexp2MatchCache struct {

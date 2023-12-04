@@ -1,8 +1,9 @@
 package goja
 
 import (
-	"github.com/onlpsec/gojs/goja/unistring"
 	"reflect"
+
+	"github.com/onlpsec/gojs/goja/unistring"
 )
 
 type destructKeyedSource struct {
